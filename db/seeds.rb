@@ -1,7 +1,8 @@
 
 # Create our users --- OBS: after add a devise we need include a email and password of users
-User.create name: 'José', status: :active, kind: :salesman
-User.create name: 'Marcos', status: :active, kind: :manager
+User.create name: 'José', status: :active, kind: :salesman, email: 'salesman@teste.com', password: 123456
+User.create name: 'Manuel', status: :active, kind: :salesman, email: 'salesman2@teste.com', password: 123456
+User.create name: 'Marcos', status: :active, kind: :manager, email: 'manager@teste.com', password: 123456
  
 # Create any products for examples
 Product.create name: 'house', description:'220m2, two rooms, one bathroom', status: :active
