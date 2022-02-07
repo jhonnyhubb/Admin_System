@@ -25,6 +25,7 @@ RailsAdmin.config do |config|
   # config.show_gravatar = true
 
   config.model Sale do
+    navigation_icon 'fa fa-money'
     create do
       field  :client
       field  :sale_date
@@ -102,6 +103,24 @@ RailsAdmin.config do |config|
    
     end
   end
+
+  config.model Discount do
+    parent Product
+  end
+   
+  config.model Sale do
+    parent User
+    weight -2
+  end
+   
+  config.model Comission do
+    parent User
+    weight -1
+  end
+   
+  config.model Client do
+    parent User
+  end
    
   config.model ProductQuantity do
     visible false
@@ -111,7 +130,22 @@ RailsAdmin.config do |config|
     visible false
   end
    
+  config.model ProductQuantity do
+    visible false
+  end
    
+  config.model Address do
+    visible false
+  end
+      
+  config.main_app_name = ["the brokers' society", ""]
+
+  config.navigation_static_links = {
+    'Jonas' => 'https://jonasfm.netlify.app'
+  }
+
+  config.navigation_static_label = "useful links"
+
   config.model ProductQuantity do
     edit do
       field :product

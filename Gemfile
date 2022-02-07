@@ -48,9 +48,12 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-gem 'rails_admin'
-gem 'devise'
+gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git'  #dashboard
+gem 'devise' #login
 gem 'carrierwave'
+ 	
+# customize rails admin
+gem 'rails_admin_rollincode', :git => 'git@github.com:jhonnyhubb/Admin_Theme_Custom.git'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
